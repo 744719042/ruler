@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">像素尺子</string>
+    <string name="ruler_start">开始/转向</string>
+    <string name="ruler_stop">结束</string>
+</resources>
