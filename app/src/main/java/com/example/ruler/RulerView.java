@@ -59,7 +59,7 @@ public class RulerView extends View {
             height = CommonUtils.dp2px(80);
         } else {
             width = CommonUtils.dp2px(80);
-            height = (int) (CommonUtils.getScreenHeight() * 0.8);
+            height = CommonUtils.getScreenHeight();
         }
         setMeasuredDimension(width, height);
         mTmpRect.set(0, 0, getMeasuredWidth(), getMeasuredHeight());

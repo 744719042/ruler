@@ -30,7 +30,7 @@ public class RulerWindow {
         layoutParams.format = PixelFormat.RGBA_8888;
         layoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
         layoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
-                | WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
+                | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS;
 
         initRuler();
     }
