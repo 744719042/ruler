@@ -2,6 +2,7 @@ package com.example.ruler;
 
 import android.content.Context;
 import android.graphics.PixelFormat;
+import android.os.Build;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -28,7 +29,11 @@ public class RulerWindow {
         layoutParams.height = ruler.getMeasuredHeight();
         layoutParams.gravity = Gravity.TOP | Gravity.LEFT;
         layoutParams.format = PixelFormat.RGBA_8888;
-        layoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+        if (Build.VERSION.SDK_INT >= 26) {//8.0新特性
+            layoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        }else{
+            layoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+        }
         layoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
                 | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS;
 
